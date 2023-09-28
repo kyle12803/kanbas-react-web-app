@@ -1,0 +1,95 @@
+.container-fluid {
+	display: flex;
+	align-items: flex-start;
+}
+.kanbas-navigation {
+	width: 85px;
+	border-radius: 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+.kanbas-navigation .list-group-item {
+	background-color: black;
+	width: 100%;
+	color: white;
+	border: none;
+}
+
+.kanbas-navigation .list-group-item > i {
+	color: red;
+	font-size: 24px;
+}
+
+.kanbas-navigation .list-group-item.active {
+	background-color: white;
+	color: red;
+}
+
+.kanbas-navigation .list-group-item > div {
+	font-size: 13px;
+}
+
+.account-navigation {
+	width: 200px;
+	padding-left: 10px;
+}
+
+.account-navigation .list-group-item {
+	border: none;
+	color: red;
+	padding-left: 5px;
+}
+
+.account-navigation .list-group-item.active {
+	color: black;
+	background: white;
+	border-left: 2px solid black;
+}
+
+.profile-content {
+	padding: 20px 20px 0px 30px;
+	flex: 1;
+}
+
+.profile-name > i {
+	color: red;
+	font-size: 25px;
+	padding-right: 20px;
+}
+
+.profile-name {
+	font-size: 25px;
+}
+
+.heading {
+	padding-bottom: 5px;
+}
+
+.profile-info > i {
+	font-size: 120px;
+}
+
+a {
+	text-decoration: none;
+	color: red;
+}
+
+.profile-info p {
+	font-size: 12px;
+}
+
+.btn-light {
+	border-color: grey;
+	font-size: 12px;
+}
+
+.profile-editing > i {
+	font-size: 120px;
+}
+
+.profile-editing .btn-danger {
+	font-size: 12px;
+}

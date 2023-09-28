@@ -4,9 +4,176 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+		<link href="../index.css" rel="stylesheet" />
 	</head>
 	<body>
-		<table width="100%">
+		<div class="container-fluid">
+			<div class="row list-group kanbas-navigation">
+				<img
+					src="../images/northeastern-logo.png"
+					class="list-group-item p-0"
+					alt="Northeastern Logo"
+				/>
+				<a href="./index.html" class="list-group-item text-center p-2 active">
+					<i class="fas fa-user-circle text-secondary" class="mx-auto mb-2"></i>
+					<div>Account</div>
+				</a>
+				<a href="#" class="list-group-item text-center p-2">
+					<i class="fas fa-tachometer-alt" class="mx-auto mb-2"></i>
+					<div class="p-0">Dashboard</div>
+				</a>
+				<a href="../home.html" class="list-group-item text-center p-2">
+					<i class="fas fa-book" class="mx-auto mb-2"></i>
+					<div>Courses</div>
+				</a>
+				<a href="#" class="list-group-item text-center p-2">
+					<i class="fas fa-calendar-alt" class="mx-auto mb-2"></i>
+					<div>Calendar</div>
+				</a>
+				<a href="#" class="list-group-item text-center p-2">
+					<i class="fas fa-inbox" class="mx-auto mb-2"></i>
+					<div>Inbox</div>
+				</a>
+				<a href="#" class="list-group-item text-center p-2">
+					<i class="fas fa-clock" class="mx-auto mb-2"></i>
+					<div>History</div>
+				</a>
+				<a href="#" class="list-group-item text-center p-2">
+					<i class="fas fa-desktop" class="mx-auto mb-2"></i>
+					<div>Studio</div>
+				</a>
+				<a href="#" class="list-group-item text-center p-2">
+					<i class="fas fa-arrow-alt-circle-right" class="mx-auto mb-2"></i>
+					<div>Commons</div>
+				</a>
+				<a href="#" class="list-group-item text-center p-2">
+					<i class="fas fa-question-circle" class="mx-auto mb-2"></i>
+					<div>Help</div>
+				</a>
+			</div>
+			<div class="row profile-content">
+				<div class="heading col-12">
+					<h2 class="profile-name"><i class="fas fa-bars"></i>Kyle Chung's Profile</h2>
+					<hr />
+				</div>
+
+				<div class="list-group account-navigation col-2">
+					<a href="#" class="list-group-item">
+						<div>Notification</div>
+					</a>
+					<a href="#" class="list-group-item active">
+						<div>Profile</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Files</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Settings</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>ePortfolios</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Shared Content</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>The Hub</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Qwickly Course Tools</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Global Announcements</div>
+					</a>
+				</div>
+				<div class="profile-editing col-6">
+					<i class="fas fa-user-circle text-secondary"></i>
+					<form>
+						<div class="mb-3-">
+							<label for="nameInput" class="form-label">Name:*</label>
+							<input type="text" class="form-control" id="nameInput" value="Kyle Chung" />
+						</div>
+						<div class="mb-3">
+							<label for="pronounsInput" class="form-label">Pronouns:</label>
+							<select class="form-select" name="pronouns" id="select-one-pronouns">
+								<option value="NONE">None</option>
+								<option selected value="HEHIM">He/Him</option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label for="titleInput" class="form-label">Title:</label>
+							<input class="form-control" titleInput" type="text" />
+						</div>
+						<div class="mb-3">
+							<h5>Contact</h5>
+							No registered services, you could add some on the <a href="#">settings</a> page.
+						</div>
+						<div class="mb-3">
+							<h5><label for="biographyInput" class="form-label">Biography</label></h5>
+							<textarea class="form-control" id="biographyInput" cols="50" rows="3">
+Student, Software Engineer, FinTech and weightlifting enthusiast.
+</textarea
+							>
+						</div>
+						<h5>Links</h5>
+						<form>
+							<div class="mb-3">
+								<div class="row">
+									<div class="col-5 text-center">
+										<label for="linkTitle" class="form-label">Title</label>
+									</div>
+									<div class="col-1"></div>
+									<div class="col-5 text-center">
+										<label for="linkURL" class="form-label">URL</label>
+									</div>
+									<div class="col-1"></div>
+								</div>
+								<div class="row">
+									<div class="col-5">
+										<input class="form-control" id="linkTitle" type="text" value="Youtube" />
+									</div>
+									<div class="col-1">
+										<i class="fas fa-arrow-right"></i>
+									</div>
+									<div class="col-5">
+										<input
+											class="form-control"
+											id="linkURL"
+											type="text"
+											value="https://www.youtube.com"
+										/>
+									</div>
+									<div class="col-1">
+										<a href="#"><i class="fas fa-times fa-lg"></i></a>
+									</div>
+								</div>
+							</div>
+							<button type="button" class="btn btn-light">Add another link</button>
+						</form>
+						<hr />
+						<div class="float-end">
+							<a href="./index.html">
+								<button type="button" class="btn btn-light">Cancel</button>
+							</a>
+							<a href="./index.html">
+								<button type="button" class="btn btn-danger">Save Profile</button>
+							</a>
+						</div>
+					</form>
+				</div>
+				<div class="cancel-editing col-2">
+					<a href="./index.html">
+						<button type="button" class="btn btn-light text-nowrap">
+							<i class="fas fa-pencil-alt"></i>
+							Cancel Editing
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- <table width="100%">
 			<tr valign="baseline">
 				<td>
 					<ul>
@@ -128,6 +295,6 @@ Student, Software Engineer, FinTech and weightlifting enthusiast.
 					</form>
 				</td>
 			</tr>
-		</table>
+		</table> -->
 	</body>
 </html>
