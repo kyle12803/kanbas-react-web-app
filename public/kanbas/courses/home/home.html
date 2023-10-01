@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="../../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+		<link href="../../index.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row list-group kanbas-navigation d-none d-sm-block">
+				<img
+					src="../../images/northeastern-logo.png"
+					class="list-group-item p-0"
+					alt="Northeastern Logo"
+				/>
+				<a href="../../profile/index.html" class="list-group-item text-center p-2">
+					<i class="fas fa-user-circle text-secondary" class="mx-auto mb-2"></i>
+					<div>Account</div>
+				</a>
+				<a href="../../dashboard/index.html" class="list-group-item text-center p-2">
+					<i class="fas fa-tachometer-alt" class="mx-auto mb-2"></i>
+					<div class="p-0">Dashboard</div>
+				</a>
+				<a href="./home.html" class="list-group-item text-center p-2 active">
+					<i class="fas fa-book" class="mx-auto mb-2"></i>
+					<div>Courses</div>
+				</a>
+				<a href="#" class="list-group-item text-center p-2">
+					<i class="fas fa-calendar-alt" class="mx-auto mb-2"></i>
+					<div>Calendar</div>
+				</a>
+				<a href="#" class="list-group-item text-center p-2">
+					<i class="fas fa-inbox" class="mx-auto mb-2"></i>
+					<div>Inbox</div>
+				</a>
+				<a href="#" class="list-group-item text-center p-2">
+					<i class="fas fa-clock" class="mx-auto mb-2"></i>
+					<div>History</div>
+				</a>
+				<a href="#" class="list-group-item text-center p-2">
+					<i class="fas fa-desktop" class="mx-auto mb-2"></i>
+					<div>Studio</div>
+				</a>
+				<a href="#" class="list-group-item text-center p-2">
+					<i class="fas fa-arrow-alt-circle-right" class="mx-auto mb-2"></i>
+					<div>Commons</div>
+				</a>
+				<a href="#" class="list-group-item text-center p-2">
+					<i class="fas fa-question-circle" class="mx-auto mb-2"></i>
+					<div>Help</div>
+				</a>
+			</div>
+
+			<div class="row courses-content">
+				<div class="row courses-heading d-none d-sm-flex">
+					<div class="col-1">
+						<i class="fas fa-bars"></i>
+					</div>
+					<div class="col-10">
+						<nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#">CS4550.12631.202410</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Home</li>
+							</ol>
+						</nav>
+					</div>
+					<div class="col-1">
+						<button type="button" class="btn btn-light text-nowrap">
+							<i class="fas fa-glasses"></i>
+							Student View
+						</button>
+					</div>
+					<hr />
+				</div>
+
+				<div class="row small-heading d-sm-none">
+					<div class="col-1">
+						<a href="./small-kanbas-nav.html">
+							<i class="fas fa-bars text-white"></i>
+						</a>
+					</div>
+
+					<div class="col-10 text-center py-2">
+						<div>CS4550.12631.202410</div>
+						<div>Modules</div>
+					</div>
+
+					<div class="col-1">
+						<div class="d-flex align-items-center">
+							<i class="fas fa-glasses"></i>
+							<a href="./small-course-nav.html">
+								<i class="fas fa-chevron-down px-2 text-white"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="list-group courses-navigation col-2 col-lg-2 d-none d-md-block">
+					<p class="text-truncate mx-2">
+						<small class="text-muted">202410_1 Fall Semester Full Term</small>
+					</p>
+					<a href="./home.html" class="list-group-item active">
+						<div>Home</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Modules</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Piazza</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Zoom Meetings</div>
+					</a>
+					<a href="../assignments/index.html" class="list-group-item">
+						<div>Assignments</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Quizzes</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Grades</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>People</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Panopto Video</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Discussions</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Panopto Video</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Announcements</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Pages</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Files</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Rubrics</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Outcomes</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Collaborations</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Announcements</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Syllabus</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Progress Reports(EAB Navigate)</div>
+					</a>
+					<a href="#" class="list-group-item">
+						<div>Settings</div>
+					</a>
+				</div>
+				<div class="courses-home-info col-10 col-md-12 col-lg-8">
+					<div class="d-flex justify-content-end">
+						<button type="button" class="btn btn-light text-nowrap m-1">Collapse All</button>
+						<button type="button" class="btn btn-light text-nowrap m-1">View Progress</button>
+						<div class="dropdown m-1">
+							<button
+								class="btn btn-light dropdown-toggle"
+								type="button"
+								id="dropdownMenuButton1"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								<i class="fas fa-check-circle text-success"></i>
+								Publish All
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+								<li><a class="dropdown-item" href="#">Action</a></li>
+								<li><a class="dropdown-item" href="#">Another action</a></li>
+							</ul>
+						</div>
+						<button type="button" class="btn btn-danger m-1">
+							<i class="fas fa-plus"></i>
+							Module
+						</button>
+						<button type="button" class="btn btn-light m-1">
+							<i class="fas fa-ellipsis-v"></i>
+						</button>
+					</div>
+					<hr />
+					<div class="list-group pt-2 modules">
+						<div class="list-group-item list-group-item-dark py-3">
+							<i class="fas fa-grip-vertical"></i>
+							<i class="fas fa-caret-down p-1"></i>
+							Week 0 - INTRO
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-caret-down"></i>
+								<i class="fas fa-plus fa-sm ps-3"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-2"></i>
+							LEARNING OBJECTIVES
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-5"></i>
+							Introduction to the Course
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-5"></i>
+							Learning what is Web Development
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-5"></i>
+							Creating a development environment
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-5"></i>
+							Creating a Web Application
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-5"></i>
+							Getting started with the 1st asssignment
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-2"></i>
+							READING
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-5"></i>
+							Full Stack Developer - Chapter 1 - Introduction
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-5"></i>
+							Full Stack Developer - Chapter 1 - Creating User Interfaces With HTML
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-2"></i>
+							SLIDES
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical"></i>
+							<a href="#">
+								<i class="fas fa-link px-3 text-success"></i>
+								Introduction to Web Development
+								<i class="fas fa-share-square ps-2"></i>
+							</a>
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical"></i>
+							<a href="#">
+								<i class="fas fa-link px-3 text-success"></i>
+								Creating an HTTP Server with Node.js
+								<i class="fas fa-share-square ps-2"></i>
+							</a>
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical"></i>
+							<a href="#">
+								<i class="fas fa-link px-3 text-success"></i>
+								Creating a React Application
+								<i class="fas fa-share-square ps-2"></i>
+							</a>
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+					</div>
+
+					<div class="list-group pt-2 modules">
+						<div class="list-group-item list-group-item-dark py-3">
+							<i class="fas fa-grip-vertical"></i>
+							<i class="fas fa-caret-down p-1"></i>
+							Week 1 - HTML
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-caret-down"></i>
+								<i class="fas fa-plus fa-sm ps-3"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-2"></i>
+							LEARNING OBJECTIVES
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-5"></i>
+							Learn how to create user interfaces with HTML
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-5"></i>
+							Keep working on assignment 1
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-5"></i>
+							Deploy the assignment to Netlify
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-2"></i>
+							READING
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-5"></i>
+							Full Stack Developer - Chapter 1 - Introduction
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-5"></i>
+							Full Stack Developer - Chapter 1 - Creating User Interfaces With HTML
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical pe-2"></i>
+							SLIDES
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical"></i>
+							<a href="#">
+								<i class="fas fa-link px-3 text-success"></i>
+								Introduction to Web Development
+								<i class="fas fa-share-square ps-2"></i>
+							</a>
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<i class="fas fa-grip-vertical"></i>
+							<a href="#">
+								<i class="fas fa-link px-3 text-success"></i>
+								Creating an HTTP Server with Node.js
+								<i class="fas fa-share-square ps-2"></i>
+							</a>
+							<div class="float-end">
+								<i class="fas fa-check-circle text-success"></i>
+								<i class="fas fa-ellipsis-v ps-3"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="course-status-tab col-lg-2 d-none d-xl-block">
+					<div class="row">
+						<div class="d-block">Course Status</div>
+						<button type="button" class="btn btn-light text-nowrap col-6">
+							<i class="fas fa-ban"></i>
+							Unpublish
+						</button>
+						<button type="button" class="btn btn-success text-nowrap col-6">
+							<i class="fas fa-check-circle"></i>
+							Published
+						</button>
+					</div>
+					<div class="pt-3">
+						<button type="button" class="btn btn-light text-nowrap w-100 text-start mb-1">
+							<i class="fas fa-file-import pe-1"></i>
+							Import Existing Content
+						</button>
+						<button type="button" class="btn btn-light text-nowrap w-100 text-start mb-1">
+							<i class="fas fa-arrow-alt-circle-right pe-1"></i>
+							Import from Commons
+						</button>
+						<button type="button" class="btn btn-light text-nowrap w-100 text-start mb-1">
+							<i class="fas fa-bullseye pe-1"></i>
+							Choose Home Page
+						</button>
+						<button type="button" class="btn btn-light text-nowrap w-100 text-start mb-1">
+							<i class="fas fa-chart-bar pe-1"></i>
+							View Course Stream
+						</button>
+						<button type="button" class="btn btn-light text-nowrap w-100 text-start mb-1">
+							<i class="fas fa-bullhorn pe-1"></i>
+							New Announcement
+						</button>
+						<button type="button" class="btn btn-light text-nowrap w-100 text-start mb-1">
+							<i class="fas fa-chart-bar pe-1"></i>
+							New Analytics
+						</button>
+						<button type="button" class="btn btn-light text-nowrap w-100 text-start mb-1">
+							<i class="fas fa-bell pe-1"></i>
+							View Course Notifications
+						</button>
+					</div>
+					<div class="mt-3">
+						<p class="fw-bold">To Do</p>
+						<hr />
+						<div class="d-flex">
+							<i class="fas fa-circle text-danger px-1"></i>
+							<div>
+								<p class="course-item-title">Grade A1 - ENV + HTML</p>
+								<small class="text-muted text-truncate pt-0">
+									100 points &#x2022; Sep 18 a 11:59pm
+								</small>
+							</div>
+							<i class="fas fa-times text-secondary fa-xs ps-3"></i>
+						</div>
+					</div>
+					<div class="mt-3">
+						<div class="d-flex justify-content-between pb-0 text-nowrap">
+							<p class="fw-bold">Coming Up</p>
+							<div class="d-flex align-items-baseline">
+								<i class="fas fa-calendar-alt text-secondary pe-1"></i>
+								<a href="#" style="font-size: 12px"><p class="fw-bold">View Calendar</p></a>
+							</div>
+						</div>
+						<hr class="mt-0" />
+						<div class="d-flex mb-2">
+							<i class="fas fa-calendar-alt text-secondary px-1"></i>
+							<div>
+								<p class="course-item-title">Lecture</p>
+								<small class="text-muted text-truncate pt-0">
+									CS4550.12631.202410 <br />
+									Sep 11 at 11:45am
+								</small>
+							</div>
+						</div>
+						<div class="d-flex mb-2">
+							<i class="fas fa-calendar-alt text-secondary px-1"></i>
+							<div>
+								<p class="course-item-title">CS5610 06 SP23 Lecture</p>
+								<small class="text-muted text-truncate pt-0">
+									CS4550.12631.202410 <br />
+									Sep 11 at 6pm
+								</small>
+							</div>
+						</div>
+						<div class="d-flex mb-2">
+							<i class="fas fa-calendar-alt text-secondary px-1"></i>
+							<div>
+								<p class="course-item-title">CS5610 Web Development Summer 1 2023 - LECTURE</p>
+								<small class="text-muted text-truncate pt-0">
+									CS4550.12631.202410 <br />
+									Sep 11 at 7pm
+								</small>
+							</div>
+						</div>
+						<div class="more-courses-items">12 more in the next week...</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

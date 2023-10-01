@@ -1,11 +1,16 @@
 .container-fluid {
 	display: flex;
-	align-items: flex-start;
+	flex-direction: row;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.list-group {
+	border-radius: 0;
 }
 .kanbas-navigation {
 	width: 85px;
-	border-radius: 0;
-	height: 100%;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -51,7 +56,6 @@
 
 .profile-content {
 	padding: 20px 20px 0px 30px;
-	flex: 1;
 }
 
 .profile-name > i {
@@ -64,7 +68,7 @@
 	font-size: 25px;
 }
 
-.heading {
+.profile-heading {
 	padding-bottom: 5px;
 }
 
@@ -83,6 +87,9 @@ a {
 
 .btn-light {
 	border-color: grey;
+}
+
+.btn {
 	font-size: 12px;
 }
 
@@ -93,3 +100,96 @@ a {
 .profile-editing .btn-danger {
 	font-size: 12px;
 }
+
+.dashboard-content {
+	padding: 20px 20px 0px 30px;
+	flex: 1;
+}
+
+.published-courses-heading {
+	padding: 10px 20px 0px 20px;
+}
+
+.courses-cards .card .card-header {
+	padding-top: 150px;
+}
+
+.courses-cards .col {
+	margin: 10px;
+	width: 270px;
+}
+
+.profile-content {
+	padding: 20px 20px 0px 30px;
+	flex: 1;
+}
+
+.courses-content {
+	padding: 20px 20px 0px 30px;
+	flex: 1;
+	width: 100%;
+}
+
+.courses-heading > div > i {
+	color: red;
+	font-size: 25px;
+	padding-right: 20px;
+}
+
+.courses-navigation {
+	width: 200px;
+	padding-left: 10px;
+}
+
+.courses-navigation .list-group-item {
+	border: none;
+	color: red;
+	padding-left: 5px;
+}
+
+.courses-navigation .list-group-item.active {
+	color: black;
+	background: white;
+	border-left: 2px solid black;
+}
+
+.modules .list-group-item:not(.list-group-item-dark) {
+	border-left: 3px solid green;
+}
+
+.course-item-title {
+	font-size: 14px;
+	margin-bottom: 0px;
+	color: red;
+}
+
+.more-courses-items {
+	color: red;
+	font-size: 14px;
+}
+
+.small-heading {
+	width: 100%;
+	background-color: black;
+	color: white;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.small-courses-nav .list-group-item > i {
+	padding-right: 5px;
+}
+
+.small-kanbas-navigation {
+	display: flex;
+	flex-direction: column;
+}
+
+.small-kanbas-navigation .list-group-item {
+	background-color: white;
+	width: 100%;
+	color: red;
+	border: none;
+}
+
+.l
