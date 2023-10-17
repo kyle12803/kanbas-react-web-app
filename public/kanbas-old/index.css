@@ -1,4 +1,4 @@
-/* .container-fluid {
+.container-fluid {
 	display: flex;
 	flex-direction: row;
 	width: calc(100% - 85px);
@@ -192,4 +192,4 @@ a {
 	width: 100%;
 	color: red;
 	border: none;
-} */
+}
