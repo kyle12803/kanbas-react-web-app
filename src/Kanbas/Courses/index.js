@@ -8,6 +8,7 @@ import Home from "./Home";
 import CourseHeading from "./CourseHeading";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentsEditor";
+import Grades from "./Grades";
 
 function Courses() {
 	const { pathname } = useLocation();
@@ -32,7 +33,7 @@ function Courses() {
 							<Route path="Modules" element={<Modules />} />
 							<Route path="Assignments" element={<Assignments />} />
 							<Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
-							<Route path="Grades" element={<h1>Grades</h1>} />
+							<Route path="Grades" element={<Grades />} />
 						</Routes>
 					</div>
 				</div>
