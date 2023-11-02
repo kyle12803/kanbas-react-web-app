@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
 import AssignmentsHeader from "./AssignmentsHeader";
 import {
 	FaBook,
@@ -11,11 +10,24 @@ import {
 	FaPlus,
 } from "react-icons/fa";
 import "./index.css";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteAssignment, selectAssignment } from "./assignmentsReducer";
 
 function Assignments() {
+	const assignments = useSelector((state) => state.assignmentsReducer.assignments);
 	const { courseId } = useParams();
-	const assignments = db.assignments;
 	const courseAssignments = assignments.filter((assignment) => assignment.course === courseId);
+
+	const handleDelete = (e, assignmentId) => {
+		e.preventDefault();
+		if (window.confirm("Are you sure you want to delete this assignment?")) {
+			dispatch(deleteAssignment(assignmentId));
+		} else {
+			return;
+		}
+	};
+
+	const dispatch = useDispatch();
 	return (
 		<div>
 			<AssignmentsHeader />
@@ -38,6 +50,7 @@ function Assignments() {
 					<Link
 						key={assignment._id}
 						to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+						onClick={() => dispatch(selectAssignment(assignment))}
 						className="list-group-item"
 					>
 						<div className="row align-items-center">
@@ -59,6 +72,14 @@ function Assignments() {
 							<div className="col-auto">
 								<FaCheckCircle className="text-success" />
 								<FaEllipsisV />
+								<button
+									className="btn btn-danger"
+									onClick={(e) => {
+										handleDelete(e, assignment._id);
+									}}
+								>
+									Delete
+								</button>
 							</div>
 						</div>
 					</Link>

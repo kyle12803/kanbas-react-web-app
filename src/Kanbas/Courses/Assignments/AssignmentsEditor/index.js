@@ -2,15 +2,31 @@ import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import db from "../../../Database";
 import { FaCheckCircle, FaEllipsisV } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+import {
+	addAssignment,
+	deleteAssignment,
+	updateAssignment,
+	selectAssignment,
+} from "../assignmentsReducer";
 
 function AssignmentEditor() {
-	const { assignmentId } = useParams();
-	const assignment = db.assignments.find((assignment) => assignment._id === assignmentId);
+	const { courseId, assignmentId } = useParams();
+	console.log(assignmentId);
+	const isNewAssignment = assignmentId === "AssignmentsEditor";
+	const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+	// const assignment = isNewAssignment ? { title: "New Assignment 123" } : assignmentFromState;
 
-	const { courseId } = useParams();
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
+
 	const handleSave = () => {
-		console.log("Actually saving assignment TBD in later assignments");
+		dispatch(addAssignment({ ...assignment, course: courseId }));
+		navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+	};
+
+	const handleUpdate = () => {
+		dispatch(updateAssignment(assignment));
 		navigate(`/Kanbas/Courses/${courseId}/Assignments`);
 	};
 	return (
@@ -30,7 +46,12 @@ function AssignmentEditor() {
 					<label for="assignment-name" class="form-label">
 						Assignment Name
 					</label>
-					<input type="text" class="form-control" id="assignment-name" value={assignment.title} />
+					<input
+						id="assignment-name"
+						value={assignment.title}
+						class="form-control"
+						onChange={(e) => dispatch(selectAssignment({ ...assignment, title: e.target.value }))}
+					/>
 				</div>
 				<div class="mb-3">
 					<textarea class="form-control" rows="4">
@@ -40,101 +61,7 @@ function AssignmentEditor() {
 						the content to a remote server hosted on Netlify.
 					</textarea>
 				</div>
-				<div class="form-group row justify-content-center mb-3">
-					<label for="points" class="d-flex col-auto col-form-label justify-content-end w-25">
-						Points
-					</label>
-					<div class="col-6">
-						<input type="number" class="form-control" id="points" value="100" />
-					</div>
-				</div>
-				<div class="form-group row justify-content-center mb-3">
-					<label
-						for="assignment-group"
-						class="d-flex col-auto col-form-label justify-content-end w-25"
-					>
-						Assignment Group
-					</label>
-					<div class="col-6">
-						<select class="form-select" id="assignment-group">
-							<option value="assignment">Assignment</option>
-							<option value="project">Project</option>
-							<option value="quiz">Quiz</option>
-							<option value="exam">Exam</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group row justify-content-center mb-3">
-					<label
-						for="display-grade"
-						class="d-flex col-auto col-form-label justify-content-end w-25"
-					>
-						Display Grade as
-					</label>
-					<div class="col-6">
-						<select class="form-select" id="display-grade">
-							<option value="percentage">Percentage</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-check d-flex justify-content-center mb-3">
-					<input class="form-check-input" type="checkbox" id="count-to-final-grade" />
-					<label class="form-check-label ps-2" for="count-to-final-grade">
-						Do not count this this assignment towards the final grade
-					</label>
-				</div>
-				<div class="form-group row justify-content-center mb-3">
-					<label
-						for="submission-type"
-						class="d-flex col-auto col-form-label justify-content-end w-25"
-					>
-						Submission Type
-					</label>
-					<div class="col-6">
-						<div class="border p-4">
-							<form>
-								<select class="form-select" id="display-grade">
-									<option value="percentage">Online</option>
-								</select>
-								<div class="form-group">
-									<label for="online-entry-options" class="py-2">
-										<b> Online Entry Options </b>
-									</label>
-									<div>
-										<input type="checkbox" id="text-entry" />
-										<label class="entry-options p-1" for="text-entry">
-											Text Entry
-										</label>
-									</div>
-									<div>
-										<input type="checkbox" id="website-url" />
-										<label class="entry-options p-1" for="website-url">
-											Website URL
-										</label>
-									</div>
-									<div>
-										<input type="checkbox" id="media-recordings" />
-										<label class="entry-options p-1" for="media-recordings">
-											Media Recordings
-										</label>
-									</div>
-									<div>
-										<input type="checkbox" id="student-annotation" />
-										<label class="entry-options p-1" for="student-annotation">
-											Student Annotations
-										</label>
-									</div>
-									<div>
-										<input type="checkbox" id="file-uploads" />
-										<label class="entry-options p-1" for="file-uploads">
-											File Uploads
-										</label>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
+
 				<div class="form-group row justify-content-center mb-3">
 					<label for="assign" class="d-flex col-auto col-form-label justify-content-end w-25">
 						Assign
@@ -142,12 +69,6 @@ function AssignmentEditor() {
 					<div class="col-6">
 						<div class="border p-4">
 							<form>
-								<div class="mb-3">
-									<label for="assign-to" class="form-label">
-										<b>Assign to</b>
-									</label>
-									<input type="text" class="form-control" id="assign-to" value="Everyone" />
-								</div>
 								<div class="mb-3">
 									<label for="due" class="form-label">
 										<b>Due</b>
@@ -189,7 +110,10 @@ function AssignmentEditor() {
 						<Link to={`/Kanbas/Courses/${courseId}/Assignments`} className="btn btn-danger">
 							Cancel
 						</Link>
-						<button onClick={handleSave} className="btn btn-success m-2">
+						<button
+							onClick={isNewAssignment ? handleSave : handleUpdate}
+							className="btn btn-success m-2"
+						>
 							Save
 						</button>
 					</div>
