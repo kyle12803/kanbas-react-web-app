@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import AssignmentsHeader from "./AssignmentsHeader";
 import {
@@ -11,23 +11,36 @@ import {
 } from "react-icons/fa";
 import "./index.css";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteAssignment, selectAssignment } from "./assignmentsReducer";
+import {
+	addAssignment,
+	deleteAssignment,
+	selectAssignment,
+	updateAssignment,
+	setAssignments,
+} from "./assignmentsReducer";
+import * as client from "./client.js";
 
 function Assignments() {
 	const assignments = useSelector((state) => state.assignmentsReducer.assignments);
 	const { courseId } = useParams();
 	const courseAssignments = assignments.filter((assignment) => assignment.course === courseId);
-
-	const handleDelete = (e, assignmentId) => {
+	const dispatch = useDispatch();
+	const handleDeleteAssignment = (e, assignmentId) => {
 		e.preventDefault();
 		if (window.confirm("Are you sure you want to delete this assignment?")) {
-			dispatch(deleteAssignment(assignmentId));
+			client.deleteAssignments(assignmentId).then((status) => {
+				dispatch(deleteAssignment(assignmentId));
+			});
 		} else {
 			return;
 		}
 	};
+	useEffect(() => {
+		client
+			.findAllAssignmentsForCourse(courseId)
+			.then((assignments) => dispatch(setAssignments(assignments)));
+	}, [courseId]);
 
-	const dispatch = useDispatch();
 	return (
 		<div>
 			<AssignmentsHeader />
@@ -75,7 +88,7 @@ function Assignments() {
 								<button
 									className="btn btn-danger"
 									onClick={(e) => {
-										handleDelete(e, assignment._id);
+										handleDeleteAssignment(e, assignment._id);
 									}}
 								>
 									Delete
