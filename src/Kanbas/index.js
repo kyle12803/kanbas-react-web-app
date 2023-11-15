@@ -9,7 +9,7 @@ import { Provider } from "react-redux";
 import axios from "axios";
 
 function Kanbas() {
-	const [courses, setCourses] = useState(db.courses);
+	const [courses, setCourses] = useState([]);
 	const [course, setCourse] = useState({
 		name: "New Course",
 		number: "New Number",
