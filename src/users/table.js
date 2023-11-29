@@ -51,7 +51,7 @@ function UserTable() {
 		fetchUsers();
 	}, []);
 	return (
-		<div className="my-container-fluid content">
+		<div className="content">
 			<h1>User List</h1>
 			<table className="table">
 				<thead>
