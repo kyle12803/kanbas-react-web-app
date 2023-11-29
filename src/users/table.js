@@ -50,6 +50,7 @@ function UserTable() {
 	useEffect(() => {
 		fetchUsers();
 	}, []);
+
 	return (
 		<div className="content">
 			<h1>User List</h1>
