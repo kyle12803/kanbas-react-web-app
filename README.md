@@ -1,6 +1,9 @@
 # Kanbas Project
+**Note:** The most up-to-date branch is **`a6`**.
+
 This project includes both a frontend and backend repository :
-- [Backend Repository](https://github.com/kyle12803/kanbas-node-server-app)
+[Backend Repository](https://github.com/kyle12803/kanbas-node-server-app)
+
 
 # Getting Started with Create React App
 
