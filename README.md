@@ -1,3 +1,7 @@
+# Kanbas Project
+This project includes both a frontend and backend repository :
+- [Backend Repository](https://github.com/kyle12803/kanbas-node-server-app)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
